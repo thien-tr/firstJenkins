@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Test application'
                 bat """
-                    C:\\Users\\Trainer\\AppData\\Local\\Programs\\Python\\Python312\\python.exe F:\\PYTHON\\DEMO\\CICD\\test.py
+                    python test.py
                 """
             }
         }
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'Deploy application'
                  bat """
-                    copy "F:\\PYTHON\\DEMO\\CICD\\People.py" F:\\PYTHON\\DEMO\\TEMP_SERVER
+                    xcopy firstPipeline F:\\PYTHON\\DEMO\\TEMP_SERVER
                 """
             }
         }
