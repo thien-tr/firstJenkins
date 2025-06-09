@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Build application'
-                echo %PATH%
+                echo "%PATH%"
             }
         }
         stage('test') {
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Deploy application'
                  bat """
-                    xcopy firstPipeline F:\\PYTHON\\DEMO\\TEMP_SERVER
+                    xcopy firstPipeline F:\\PYTHON\\DEMO\\TEMP_SERVER /E /Y /I
                 """
             }
         }
