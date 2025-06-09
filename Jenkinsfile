@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Deploy application'
                  bat """
-                    xcopy firstPipeline F:\\PYTHON\\DEMO\\TEMP_SERVER /E /Y /I
+                    xcopy . F:\\PYTHON\\DEMO\\TEMP_SERVER /E /Y /I
                 """
             }
         }
