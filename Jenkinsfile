@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Build application'
-                echo "%PATH%"
+                echo "${env.PATH}"
             }
         }
         stage('test') {
